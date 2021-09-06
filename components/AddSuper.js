@@ -1,7 +1,8 @@
-import React, {useState} from "react"
+import React, {useAppContext,useContext} from "react"
+import {AppContext} from './context'
 
 export const AddSuper = () => {
-    const [teamSize, setTeamSize] = useState(0)
+    const { teamSize, setTeamSize} = useContext(AppContext);
 
     const add = () => {    
         if (teamSize <= 731) setTeamSize(teamSize+1)
