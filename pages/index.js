@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import heroes from '../components/fetch' 
+import { AddSuper } from '../components/AddSuper'
 
 export default function Home() {
   return (
@@ -12,8 +14,9 @@ export default function Home() {
       </Head>
 
       <main>
-
+          <AddSuper />
       </main>
     </div>
   )
 }
+// 10226206302529619
