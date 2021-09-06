@@ -3,8 +3,12 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import heroes from '../components/fetch' 
 import { AddSuper } from '../components/AddSuper'
+import SuperHeroeCard from '../components/SuperHeroCard'
+import {AppContext} from '../components/context'
+import { useContext,useEffect } from 'react'
 
 export default function Home() {
+  const { teamSize, randomNumber } = useContext(AppContext);
   return (
     <div className={styles.container}>
       <Head>
@@ -15,6 +19,7 @@ export default function Home() {
 
       <main>
           <AddSuper />
+          
       </main>
     </div>
   )
